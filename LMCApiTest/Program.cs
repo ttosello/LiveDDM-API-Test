@@ -42,8 +42,8 @@ namespace LMCApiTest
 
         static async Task InitHttpClient()
         {
-            //var baseUri = new Uri("https://liveddmmanagementclient.azurewebsites.net");
-            var baseUri = new Uri("https://localhost:7002");
+            var baseUri = new Uri("https://liveddmmanagementclient.azurewebsites.net");
+           
 
             _Client = new HttpClient();
             _Client.BaseAddress = baseUri;
@@ -51,7 +51,7 @@ namespace LMCApiTest
             //
             // authenticate using your vendor Api key
             //
-            var apiKey = "MzQyNjhmYzA2YzJhNDM2ZTA1MzBjMzk1OGQyODQ3ZDc4MjI2MzNjMjljYTNhM2NkMjZjYjY4YmE0OGFmMjFjMTFmODA0OTM5Njk2NTAzOGFiYWQwOGQ4MGQ0MmQ3MzVjYzE2NTkyOTFmOGFiYzc5OWUyZmVkMjYxNzA5NGZjMjA=";
+            var apiKey = "{your_api_key}";
             var uri = $"api/authentication/authenticatevendor/{apiKey}";
             //
             // get your Jwt token
